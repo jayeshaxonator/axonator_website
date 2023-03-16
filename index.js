@@ -1,8 +1,8 @@
-const express = require('express')
-const app = express()
-
-app.use(express.static('public'))
-
-app.listen(3000, () => {
-  console.log('Server started on port 3000')
-})
+// create express server  
+const express = require('express');
+const app = express();
+const port = 3000;
+//serve static files
+app.use(express.static('public'));
+//start server
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
