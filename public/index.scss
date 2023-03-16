@@ -1,0 +1,108 @@
+// Define common theme variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$text-color: #333;
+$font-family: 'Open Sans', sans-serif;
+
+// Base styles
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+  margin: 0;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Header styles
+header {
+  background-color: $secondary-color;
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      
+      li {
+        margin: 0 10px;
+        
+        a {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// Main styles
+main {
+  padding: 20px;
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+    
+    div {
+      flex: 1;
+      
+      h2 {
+        font-size: 28px;
+        font-family: $font-family;
+        font-weight: bold;
+        color: $primary-color;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        font-size: 18px;
+        font-family: $font-family;
+        font-weight: normal;
+        color: $text-color;
+      }
+    }
+    
+    img {
+      max-width: 100%;
+      margin-bottom: 20px;
+      
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+// Footer styles
+footer {
+  background-color: $secondary-color;
+  padding: 20px;
+  
+  p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+  }
+}
